@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="testPlug" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>firstPlug</name>
+    <js-module name="firstPlug" src="www/firstPlug.js">
+        <clobbers target="cordova.plugins.firstPlug" /></js-module>
+    <platform name="android"><config-file parent="/*" target="res/xml/config.xml">
+        <feature name="firstPlug"><param name="android-package" value="testPlug.firstPlug" />
+        </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml">
+    </config-file>
+    <source-file src="src/android/firstPlug.java" target-dir="src/testPlug/firstPlug" />
+    <source-file src="src/android/RSAEncrypt.java" target-dir="src/testPlug/RSAEncrypt" />
+    
+    </platform>
+</plugin>
